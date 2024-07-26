@@ -4,7 +4,7 @@ import camelCase from 'lodash/camelCase'
 export const setupComponents = (app) => {
     // Import and register your components here
     // 注册公共组件
-    const baseComponents = import.meta.globEager('@/components/**/*.vue')
+    const baseComponents = import.meta.glob('@/components/**/*.vue', {eager: true})
     Object.keys(baseComponents).forEach((fileName, component) => {
         // 获取组件的 PascalCase 命名
         const componentName = upperFirst(

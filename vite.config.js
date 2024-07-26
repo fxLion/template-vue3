@@ -11,6 +11,7 @@ const pathResolve = (dir) => resolve(__dirname, '.', dir)
 const alias = {
   '@': pathResolve('src'),
   '~': pathResolve('./'),
+  '@public': pathResolve('public'),
 }
 
 // https://vitejs.dev/config/
@@ -27,7 +28,7 @@ export default defineConfig(({command, mode}) =>{
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "@/assets/styles/global.scss" as *;`
+          additionalData: `@import "@/assets/styles/global.scss";`
         }
       }
     },

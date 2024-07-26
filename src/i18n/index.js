@@ -5,7 +5,7 @@ import zhEleLocale from 'element-plus/es/locale/lang/zh-cn'
 const en = enEleLocale
 const zhCN = zhEleLocale
 // en.el.pagination.total = '{total} Item(s)'
-const allModules = import.meta.globEager('./**/*.js')
+const allModules = import.meta.glob('./**/*.js', {eager: true})
 Object.keys(allModules).forEach(modulePath => {
   const array = modulePath.replace(/\.\/(.*)\.js$/, '$1').split('/')
   let tempEn = en

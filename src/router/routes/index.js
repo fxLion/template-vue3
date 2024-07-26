@@ -1,6 +1,6 @@
 import Layout from '@/layout/index.vue'
 
-const modules = import.meta.globEager('./*.js')
+const modules = import.meta.glob('./*.js', {eager: true})
 const asyncRoutes = []
 Object.keys(modules).forEach(key => {
   asyncRoutes.push(...modules[key].default)
@@ -36,7 +36,7 @@ export const basicRoutes = [
     name: 'Home',
     path: '/',
     component: Layout,
-    redirect: '/overview',
+    redirect: '/home',
     meta: {
       title: 'Home | FUYUN',
       icon: 'mdi:chart-bar'

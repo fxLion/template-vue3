@@ -842,10 +842,10 @@ export default {
             width: 0;
             height: 40%;
             transition: all 200ms;
+            border: solid 1px #6aa0ff;
             &:nth-child(2) {
               margin: 0 4px;
             }
-            border: solid 1px #6aa0ff;
           }
           &:hover,
           &.isDown {
