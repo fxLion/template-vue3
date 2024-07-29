@@ -28,7 +28,7 @@ export default defineConfig(({command, mode}) =>{
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "@/assets/styles/global.scss";`
+          additionalData: `@use "@/assets/styles/element.scss" as *;`
         }
       }
     },
@@ -42,10 +42,10 @@ export default defineConfig(({command, mode}) =>{
       }),
       AutoImport({
         imports: ['vue', 'vue-router', 'vue-i18n'],
-        resolvers: [ElementPlusResolver()]
+        resolvers: [ElementPlusResolver({importStyle: 'sass'})]
       }),
       Components({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver({importStyle: 'sass'})],
       })
     ],
     build: {

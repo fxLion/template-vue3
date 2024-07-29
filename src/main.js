@@ -5,7 +5,7 @@ import { setupStore } from '@/store'
 import { setupComponents } from '@/components'
 // import { setupDirectives } from '@/directives'
 import App from './App.vue'
-import 'element-plus/dist/index.css'
+// import 'element-plus/dist/index.css'
 import 'virtual:svg-icons-register'
 
 const app = createApp(App)
